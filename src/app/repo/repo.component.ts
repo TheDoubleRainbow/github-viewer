@@ -28,7 +28,6 @@ export class RepoComponent implements OnInit {
   loadBranches() {
     this._github.getBranches(this.username, this.reponame).subscribe((branches: any) => {
       this.branches = branches;
-      console.log(this.branches);
     })
   }
 

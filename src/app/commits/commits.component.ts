@@ -24,7 +24,6 @@ export class CommitsComponent implements OnInit {
     this._github.getCommits(this.username, this.reponame, this._sha).subscribe(commits => {
       this.commits = commits;
       if(this.commits.length < 10) this.nothingToLoad = true;
-      console.log(this.commits);
     });
   }
 
