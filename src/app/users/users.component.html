@@ -1,0 +1,19 @@
+<div class="load-since">Load since id: <input type="text" class="load-since__input" [(ngModel)] = "loadSince" /><button (click) = "loadUsers()" class="btn load-since__button">Load</button></div>
+<main class="user-list">
+    <div class="user" *ngFor = "let user of users">
+        <figure class="user__pic"><img [src]= "user.avatar_url" /></figure>
+        <figcaption class="user__data">
+            <div class="user__info">
+                <div class="user__name">{{user.login}}</div>
+                <div class="user__email">
+                    <button *ngIf = "!user.email" (click) = "loadEmail(user)" class="btn user__show-email-btn">Show email</button>
+                    <span *ngIf = 'user.email' class="user__email-text">{{user.email}}</span>
+                </div>
+            </div>
+            <div class="user__open">
+                <a (click) = "setUser(user)" [href]="'/user/' + user.login" class="btn user__open-btn">View</a>
+            </div>
+        </figcaption>
+    </div>
+
+</main>

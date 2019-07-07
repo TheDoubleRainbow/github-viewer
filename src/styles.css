@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+a{ 
+    text-decoration: none;
+    color: black;   
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover{
+    color: black;
+}
+
+.app {
+    position: absolute;
+    width: 100%;
+    animation: show .7s forwards;
+    transform:  translateX(100%);
+}
+
+@keyframes show {
+    100% {
+        transform: translateX(0%);
+    }
+}

@@ -1,0 +1,31 @@
+<div class="commits">
+    <app-back-button></app-back-button>
+    <div class="commits__header">
+        <div class="commits__title">
+            Commits of <b>{{reponame}}</b> by {{username}}
+        </div>
+    </div>
+    <div class="commit-list">
+        <div class="commit" *ngFor="let commit of commits">
+            <div class="commit__top">
+                <div *ngIf = "commit.author" class="commit__user">
+                    <img [src] = "commit.author.avatar_url" />
+                    <span class="commit__username">{{commit.author.login}}</span>
+                    <span class="commit__date"> {{commit.commit.author.date.split('T')[0]}} at {{commit.commit.author.date.split('T')[1].split('Z')[0]}}</span>
+                </div>
+                <div *ngIf = "!commit.author" class="commit__user">
+                    No author data
+                </div>
+                <a class="commit__link" [href] = "commit.html_url">
+                    View on GitHub
+                </a>
+            </div>
+            <div class="commit__body">
+                {{commit.commit.message}}
+            </div>
+        </div>
+        <div *ngIf = "!nothingToLoad" (click) = "loadMore()" class="load-more">
+                Load more
+        </div>
+    </div>
+</div>

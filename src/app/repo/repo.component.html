@@ -1,0 +1,17 @@
+<div *ngIf = "repo" class="repo">
+    <app-back-button></app-back-button>
+    <div class="repo__header">
+        <div class="repo__name">{{repo.name}} by {{repo.owner.login}}</div>
+        <div class="repo__desc">{{repo.description}}</div>
+        <div class="repo__lang">Created using {{repo.language}}</div>
+    </div>
+    <a [href] = "repo.html_url" class="repo__gh-link">
+        View on GitHub
+    </a>
+    <div class="repo__branches">
+        <div class="branches-title">Branches</div>
+        <div class="branch">
+            <a class="branch__name" [href] = "'/commits/' + username + '/' + reponame + '/' + branch.commit.sha " *ngFor = "let branch of branches">{{branch.name}}</a>
+        </div>
+    </div>
+</div>

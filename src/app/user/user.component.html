@@ -1,0 +1,26 @@
+<div *ngIf = "user" class="user">
+    <app-back-button></app-back-button>
+    <div class="user__pic">
+        <img [src] = "user.avatar_url" />
+    </div>
+    <div class="user__data">
+        <div *ngIf="user.name" class="user__full-name">
+            {{ user.name }}
+        </div>
+        <div class="user__name">
+            {{ user.login }}
+        </div>
+        <div class="user__email">
+            {{ user.email === null ? 'No email available' : user.email }}
+        </div>
+    </div>
+    <a [href] = "user.html_url" class="user__gh-link">
+            View on GitHub
+    </a>
+    <div class="repos">
+        <div class="repos__title">{{repos?.length ? 'Repos' : 'No public repos available'}}</div>
+        <div class="repos__repo" *ngFor = "let repo of repos">
+            <a class="repo__repo-name" [href] = "'/repo/' + username + '/' + repo.name" >{{repo.name}}</a>
+        </div>
+    </div>
+</div>

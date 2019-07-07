@@ -1,0 +1,67 @@
+.user {
+    width: max-content;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.user__pic {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.user__pic img {
+    object-fit: cover;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px #AAB;
+}
+
+.user__data, .repos {
+    min-width: 500px;
+    box-shadow: 0px 0px 5px #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 15px;
+}
+
+.repos__repo {
+    display: inline-block;
+    box-shadow: 0px 0px 5px #ccc;
+    padding: 5px 10px;
+    margin: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user__data {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user__full-name {
+    font-weight: bold;
+}
+
+.user__email {
+    color: #AAB;
+}
+
+.repos__title{
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.user__gh-link {
+    margin: 0 auto;
+    width: 100px;
+    display: block;
+    background: #424242;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0px 0px 5px #ccc;
+}

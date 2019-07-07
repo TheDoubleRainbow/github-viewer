@@ -1,0 +1,66 @@
+.repo {
+    width: max-content;
+    min-width: 500px;
+    margin: 0 auto;
+}
+
+.repo__header {
+    text-align: center;
+    box-shadow: 0px 0px 5px #ccc;
+    border-radius: 5px;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.repo__name {
+    font-size: 24px;
+}
+
+.repo__desc {
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    font-size: 18px;
+}
+
+.repo__lang {
+    color: #aaa;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+.repo__gh-link {
+    margin: 0 auto;
+    width: 100px;
+    display: block;
+    background: #424242;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0px 0px 5px #ccc;
+    margin-top: 20px;
+}
+
+.repo__branches {
+    padding: 20px;
+    box-shadow: 0px 0px 5px #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.branches-title {
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.branch__name {
+    padding: 10px;
+    box-shadow: 0px 0px 5px #ccc;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}

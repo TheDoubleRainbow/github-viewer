@@ -1,0 +1,63 @@
+.commits {
+    width: max-content;
+    margin: 0 auto;
+    min-width: 500px;
+    max-width: 920px;
+}
+
+.commits__header {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.commit__top{
+    font-size: 12px;
+    display: flex;
+}
+
+.commit__user {
+    display: flex;
+    align-items: center;
+}
+
+.commit__user span {
+    padding: 0px 10px;
+}
+
+.commit__user img {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin: 0px 3px 0px 10px;
+}
+
+.commit {
+    box-shadow: 0px 0px 5px #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.commit__link {
+    margin-left: auto;
+    cursor: pointer;
+    padding: 3px 10px;
+    background: #424242;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.commit__body {
+    padding: 10px 5px 5px 10px;
+}
+
+.load-more {
+    width: 100px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #ccc;
+    text-align: center;
+    border-radius: 5px;
+    margin: 20px auto;
+}
